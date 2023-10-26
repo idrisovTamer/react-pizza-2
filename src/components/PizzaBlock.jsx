@@ -17,12 +17,12 @@ const typeNames = ['Тонкое', 'Традиционное'];
     <div className="pizza-block__selector">
       <ul>
         {types.map((typeId =>(
-          <li onClick={()=> setActivetype(typeId)} className={activeType === typeId ? 'active' : ''}>{typeNames[typeId]}</li>
+          <li key={typeId} onClick={()=> setActivetype(typeId)} className={activeType === typeId ? 'active' : ''}>{typeNames[typeId]}</li>
         )))}
       </ul>
       <ul>
        {sizes.map((size, i) => (
-       <li onClick={()=> setActiveSize(i)} className={activeSize === i ? 'active' : ''}>{size} см.</li>))}
+       <li key={size} onClick={()=> setActiveSize(i)} className={activeSize === i ? 'active' : ''}>{size} см.</li>))}
       </ul>
     </div>
     <div className="pizza-block__bottom">
