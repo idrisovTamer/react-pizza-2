@@ -14,18 +14,17 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [searchValue, setSearchValue] = React.useState('');
+  const [searchValue, setSearchValue] = React.useState("");
   return (
     <div className="wrapper">
       <Header searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <div className="content">
-          <Routes>
-            <Route path="/" element={<Home searchValue={searchValue}/>} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/not-found" element={<NotFound />} />
-          </Routes>
-        
+        <Routes>
+          <Route path="/" element={<Home searchValue={searchValue} />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/not-found" element={<NotFound />} />
+        </Routes>
       </div>
     </div>
   );
